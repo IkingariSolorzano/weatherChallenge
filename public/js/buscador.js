@@ -10,18 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         spin.remove();
     }, 5500);
-
-    
-}
-
-
-
-
-);
+});
 
 button.addEventListener('click', function (e) {
     e.preventDefault();
     ciudad = searchbar.value;
+
+ 
     window.location.href = `./search?ciudad=${ciudad}`;
 });
 

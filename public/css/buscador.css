@@ -9,13 +9,13 @@ background-size: 100%;;
 
 .searchsection{
   margin-top:25px;
-  height: 20vh;
+  height: 15vh;
 
 
 }
 
 .searchsection input, button{
-  height: 60px;
+  height: 50px;
 }
 
 .barra{

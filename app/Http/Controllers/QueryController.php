@@ -30,6 +30,7 @@ class QueryController extends Controller
     public function search(Request $request)
     {
         $ciudad = $request['ciudad'];
+        // dd($ciudad);
         $consulta = 'http://api.openweathermap.org/data/2.5/weather?q=' . $ciudad . '&appid=6eee4a38fa835c11fec271ba5ca255c6&lang=es&units=Metric';
         $consulta2 = 'http://api.openweathermap.org/data/2.5/forecast?q=' . $ciudad . '&appid=6eee4a38fa835c11fec271ba5ca255c6&lang=es&units=Metric';
         
@@ -50,16 +51,13 @@ class QueryController extends Controller
             $data['pronostico']= array_slice($lista, 0, 3);
             // dd($data['pronostico']);
             
-            return view('home',  $data );
+            return  view('home', $data);
         }else{
             $data['error'] = ['error'=>"No se encontró la ciudad"];
-            return view('home', $data);
-
+            return  view('home', $data);
+            
         }
         // $horaC =  date("Y-m-d H:i:s", $lista[0]['dt']);
-       
-
-
     }
 
     /**
@@ -70,7 +68,7 @@ class QueryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
